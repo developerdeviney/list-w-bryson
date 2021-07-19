@@ -1,0 +1,34 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>The Disciples</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.21.1/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <script>
+        import disciples from './data.js'
+        import { listDisciples, randomData } from './index.js'
+        console.log(randomData)
+
+        const test = document.getElementById('disciples')
+        test.innerHTML = listDisciples(disciples)
+
+        const button = document.getElementById('button')
+        button.addEventListener('click', () => {
+            console.log('Clicked!')
+            randomData()
+            document.createElement(randomData)
+        })
+    </script>
+
+    <h1>The Disciples</h1>
+    <ul id='disciples'></ul>
+    <button id='button'>Click Me</button>
+
+</body>
+
+</html>
